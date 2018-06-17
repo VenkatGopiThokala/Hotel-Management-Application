@@ -1,0 +1,56 @@
+
+<app-header></app-header>
+
+<!-- Page Content -->
+<div class="container">
+
+	<!-- Page Heading/Breadcrumbs -->
+	<h1 class="mt-4 mb-3">Booking Confirmation</h1>
+
+
+
+	<!-- Image Header -->
+	<img class="img-fluid rounded mb-4" src="{{image}}"
+		alt="">
+
+	<!-- Marketing Icons Section -->
+	<div class="row">
+		<div class="col-lg-4 mb-4">
+			<div class="card h-100">
+				<h4 class="card-header">Booking Details</h4>
+				<div class="card-body">
+					<h6>Checkin :  {{checkIn}}</h6><br>
+					<h6>Checkout : {{checkOut}}</h6><br>
+					<h6>No of days :  {{days}}</h6><br>
+					<h6>Cost : € {{totalPrice}},00</h6>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-lg-4 mb-4">
+			<div class="card h-100">
+				<h4 class="card-header">Guest Details</h4>
+				<div class="card-body">
+					<p class="card-text"></p>
+					<h6>Name : {{name}}</h6><br>
+					<h6>Email : {{email}}</h6><br>
+					<h6>Contact : {{contact}}</h6>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-lg-4 mb-4">
+			<div class="card h-100">
+				<h4 class="card-header">Information</h4>
+				<div class="card-body">
+					<p class="card-text">Excellent hotel for solo travelers. Close to Starbucks. Located near shopping areas and has easy access to public transportation. Great room.</p>
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /.row -->
+
+</div>
+<app-footer></app-footer>

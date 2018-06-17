@@ -1,0 +1,37 @@
+    <app-header></app-header>
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Booking History
+      </h1>
+      <!-- Blog Post -->
+      <div class="card mb-4" *ngFor="let room of bookingHist">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <a href="#">
+                <img class="img-fluid rounded" src="{{room.image1}}" alt="">
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <h2 class="card-title">{{room.type}}</h2>
+              <p class="card-text">{{room.description}}</p>
+          
+          <h6>Checkin : {{room.checkIn}}</h6>
+          <h6>Checkout : {{room.checkOut}}</h6>
+          <h6>Total Amount : € {{room.totalPrice}},00</h6>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          
+        </div>
+      </div>
+    </div>
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+<footer></footer>
+

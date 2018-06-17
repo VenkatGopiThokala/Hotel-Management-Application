@@ -1,0 +1,56 @@
+
+<app-header></app-header>
+
+<!-- Page Content -->
+<div class="container">
+
+	<!-- Page Heading/Breadcrumbs -->
+	<h1 class="mt-4 mb-3">
+		{{roomType}} <small>Checkin - {{checkIn}} and checkout - {{checkOut}}</small>
+	</h1>
+
+
+
+	<div class="row">
+		
+		<!-- Blog Entries Column -->
+		<div class="col-md-8">
+
+			<!-- Blog Post -->
+			<div class="card mb-4">
+				<img class="card-img-top" src="{{image1}}"
+					alt="Card image cap">
+				<div class="card-body">
+					<p class="card-text">{{description}}</p>
+					<h6>Price / Night : € {{price}}.00</h6>
+					<h6>No. of Days : {{days}}</h6>
+					<h6>Total Amount : € {{totalPrice}}.00</h6>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sidebar Widgets Column -->
+		<div class="col-md-4">
+
+			<!-- Search Widget -->
+			<div class="card mb-4">
+				<h5 class="card-header">Guest Details</h5>
+				<div class="card-body">
+					<div class="form-group" style="text-align: left">
+						<form>
+							<input name="name" type="text" class="form-control" placeholder="Name" [(ngModel)]="name" value={{name}}><br> 
+							<input name="mail" type="email" class="form-control" [(ngModel)]="email" value={{mail}} placeholder="Email"> <br> 
+							<input name="contact" type="number" class="form-control" [(ngModel)]="contact" value={{contact}} placeholder="Contact"> <br>
+						</form>
+						<button class="btn btn-primary" (click)=createBooking()>Book Now</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.row -->
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script type="text/javascript">
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("checin")[0].setAttribute('min', today);
+</script>
+</head>
+<body>
+
+	<app-header></app-header>
+<!-- Form to check the checkin availability -->
+	<div class="container">
+		<div class="row my-4">
+			<div class="col-lg-8">
+				<img class="img-fluid rounded"
+					src="https://www.safarihotelsnamibia.com/wp-content/uploads/2014/11/Safari-Court-Hotel-Pool.jpg"
+					width="100%" height="100%" alt="">
+			</div>
+			<div class="col-lg-4">
+				<div class="form-group" style="text-align: left">
+
+					<h2>Book Room</h2>
+					<form>
+						<label for="checkin">CheckIn </label> <input id="checkin"
+							name="checkin" data-date-start-date="+1d" [(ngModel)]="checkIn" type="date"
+							class="form-control" value="{{checkIn}}" required /> <label
+							for="checkout">CheckOut</label> <input id="checkOut"
+							name="checkout" [(ngModel)]="checkOut" type="date"
+							class="form-control" value="{{checkOut}}" required /> <br>
+							<input id="adults"
+							name="adults" [(ngModel)]="adults" type="number"
+							class="form-control" min="1" placeholder="Adults"
+							value="{{adults}}" required /><br> <input id="child"
+							name="child" [(ngModel)]="children" type="number"
+							class="form-control" min="0" placeholder="Children"
+							value="{{children}}" required /> <span name="formMessage"
+							style="color: red" id="message">{{formMessage}}</span><br>
+						<button type="submit" (click)=validateInput()
+							class="btn btn-primary btn-lg">Check Rooms</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="card text-white bg-secondary my-4 text-center">
+			<div class="card-body">
+				<p class="text-white m-0">When you get into a hotel room, you lock the door, and you know there is a secrecy,a luxury, there is fantasy. There is comfort and reassurance!</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4 mb-4">
+				<div class="card h-100">
+					<div class="card-body">
+						<h2 class="card-title">Deluxe</h2>
+						<img class="img-fluid rounded"
+							src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&h=350"
+							width="100%" height="100%" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card h-100">
+					<div class="card-body">
+						<h2 class="card-title">Premium</h2>
+						<img class="img-fluid rounded"
+							src="https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?auto=compress&cs=tinysrgb&h=350"
+							width="100%" height="100%" alt="">
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card h-100">
+					<div class="card-body">
+						<h2 class="card-title">Luxury</h2>
+						<img class="img-fluid rounded"
+							src="https://upload.wikimedia.org/wikipedia/commons/5/56/Hotel-room-renaissance-columbus-ohio.jpg"
+							width="100%" height="100%" alt="">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<app-footer></app-footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<router-outlet></router-outlet>
+<head>
+
+</head>
+<body>
+
+	<!-- Navigation -->
+	<app-header></app-header>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<!-- Page Heading/Breadcrumbs -->
+		<h1 class="mt-4 mb-3">Available rooms</h1>
+
+		<ol class="breadcrumb">
+			<li>Check in : {{checkIn}}</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>Check out : {{checkOut}}</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>Adults : {{adults}}</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li>Children : {{children}}</li>
+		</ol>
+		<div class="row" *ngFor="let item of validRooms">
+			<div class="col-md-7">
+				<a href="#"> <img class="img-fluid rounded mb-3 mb-md-0"
+					src="{{item.image1}}"
+					width="100%" height="100%" alt="">
+				</a>
+				<hr>
+			</div>
+			<div class="col-md-5">
+				<h3>{{item.type}}</h3>
+				<p>{{item.description}}</p>
+				<h6>Price / Night : € {{item.price}},00</h6>
+				<h6>No. of Days : {{days}}</h6>
+				<h6>Total Amount : € {{item.price * days}},00</h6>
+				
+				<br>
+				<button class="btn btn-primary" (click)=selectRoom(item.id)>Select Room &rarr;</button>
+				 <!-- <a class="btn btn-primary" (onclick)=selectRoom(item.id)>Select Room &rarr;</a> -->
+ 			</div>
+		</div>
+	</div>
+	<hr>
+<app-footer></app-footer>
+</body>
+</html>
