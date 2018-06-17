@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: D071973
+Build-Jdk: 9.0.1
+Implementation-Title: SpringBootH2Integration
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: com.javasampleapproach.h2database
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootH2
+ Integration/
+Created-By: Maven Integration for Eclipse
+
